@@ -459,10 +459,34 @@ const audio = new Audio("./assets/music/hieuthuhai-sinh-nhật-prod.by-wonderlu
 audio.autoplay = true;
 
 // Chrome và nhiều trình duyệt chặn tự động phát nhạc, cần tương tác người dùng
+// Tạo nút bật nhạc
+const musicButton = document.createElement('button');
+musicButton.textContent = 'Bật nhạc';
+musicButton.style.position = 'fixed';
+musicButton.style.bottom = '30px';
+musicButton.style.right = '30px';
+musicButton.style.zIndex = '9999';
+musicButton.style.padding = '10px 20px';
+musicButton.style.fontSize = '18px';
+musicButton.style.background = '#ff4081';
+musicButton.style.color = '#fff';
+musicButton.style.border = 'none';
+musicButton.style.borderRadius = '8px';
+musicButton.style.cursor = 'pointer';
+
+document.body.appendChild(musicButton);
+
+musicButton.addEventListener('click', () => {
+    audio.play();
+    musicButton.style.display = 'none';
+});
+
+// Nếu phát tự động bị chặn, hiện nút
 audio.play().catch(() => {
-    function handleClick() {
-        audio.play();
-        window.removeEventListener('click', handleClick);
-    }
-    window.addEventListener('click', handleClick);
+    musicButton.style.display = 'block';
+});
+
+// Nếu phát tự động thành công, ẩn nút
+audio.addEventListener('play', () => {
+    musicButton.style.display = 'none';
 });
