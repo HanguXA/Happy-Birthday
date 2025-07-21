@@ -2,7 +2,7 @@ var S = {
     init: function () {
         S.Drawing.init('.canvas');
         document.body.classList.add('body--ready');
-        S.UI.simulate("Chào cậu|Tớ|Có|Món Quà| Cho Cậu |#countdown 3|Happy BirthDay| Chúc Mừng | Sinh Nhật | Nguyễn Đại Hưng | Redamancy | 21 - 07 - 2006 |❤️");
+        S.UI.simulate("Chào cậu|Tớ Có| Một Món Quà| Cho Cậu |#countdown 3|Happy BirthDay| Chúc Mừng | Sinh Nhật | Nguyễn Đại Hưng | Redamancy | 21 - 07 - 2006 |❤️");
         S.Drawing.loop(function () {
             S.Shape.render();
         });
