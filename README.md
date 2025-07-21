@@ -12,7 +12,7 @@ Trang web được thiết kế với mục tiêu:
 
 ## 🌐 Link truy cập
 
-👉 [Xem trang web tại đây]((https://hanguxa.github.io/Happy-Birthday/))  
+👉 [Xem trang web tại đây](https://hanguxa.github.io/Happy-Birthday/)  
 
 ## ✨ Tính năng
 
