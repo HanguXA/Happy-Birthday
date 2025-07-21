@@ -111,7 +111,7 @@ S.UI = (function () {
                         } else {
                             S.Shape.switchShape(S.ShapeBuilder.letter(index), true);
                         }
-                    }, 1000, value, true);
+                    }, 1500, value, true); // Chậm lại: 1500ms thay vì 1000ms
                     break;
                 case 'rectangle':
                     value = value && value.split('x');
